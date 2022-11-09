@@ -1,0 +1,40 @@
+@use 'components';
+@use 'globals';
+
+.sec-benefits {
+    @include globals.section-display();
+    margin: auto;
+    border-top: 1px solid #ddd;
+    .intro {
+        margin-top: 3rem;
+        @include globals.intro-section();
+    }
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+            text-align: center;
+            font-size: 5rem;
+            color: components.$color-main;
+        }
+        .description {
+            height: 11rem;
+            .title {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            .text {
+                text-align: center;
+                color: #888;
+                font-weight: 600;
+            }
+        }
+        .cta {
+            margin-top: 1rem;
+            text-align: center;
+            color: components.$color-main;
+            font-weight: 600;
+        }
+    }
+}

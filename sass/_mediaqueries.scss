@@ -1,0 +1,225 @@
+//components
+@use "components";
+//global styles
+@use "globals";
+//sec home
+@use 'sec-home';
+//sec features
+@use 'sec-features';
+//sec benefits
+@use 'sec-benefits';
+//sec kpis
+@use 'sec-kpis';
+//sec onboarding
+@use 'sec-onboarding';
+//sec footer cta
+@use 'sec-footer-cta';
+
+
+
+@media screen and (max-width: 992px) {
+    .nav {
+        .container-menu {
+            justify-content: space-between;
+            width: 90%;
+        }
+    }
+
+    .sec-home {
+        .home-cta {
+            .cta-text {
+                max-width: 90%;
+            }
+            .home-title {
+                width: 75%;
+            }
+            p {
+                width: 100%;
+            }
+            .btn-main {
+                width: 100%;
+            }
+        }
+    }
+
+    .sec-features {
+        margin: auto;
+        @include globals.section-display();
+        display: flex;
+        flex-direction: column;
+        .intro {
+            @include globals.intro-section();
+        }
+        .features {
+            display: flex;
+            flex-direction: column;
+            .text {
+                order: 2;
+                display: flex;
+                padding: 2rem 0;
+                max-width: 100%;
+                flex-direction: column;
+                .feature {
+                    padding-bottom: 0.5rem;
+                    .description {
+                        padding-left: 0.5rem;
+                        max-width: 100%;
+                        .title {
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                        .description-text {
+                            font-size: 0.9rem;
+                            color: #888;
+                            a {
+                                text-decoration: none;
+                                color: components.$color-main;
+                            }
+                        }
+                    }
+                }
+            }
+            .image {
+                img {
+                    order: 1;
+                    width: 80vw;
+                }
+            }
+        }
+    }
+
+    .sec-benefits {
+        .intro {
+            padding: 0;
+            margin: 0;
+        }
+        .benefit {
+            .description {
+                height: auto;
+                .text {
+                    margin: auto;
+                }
+            }
+            .cta {
+                margin: 0;
+            }
+        }
+    }
+
+    .sec-footer-cta {
+        background-image: none;
+        background-color: #113354;
+        .footer-container {
+            align-items: center;
+            justify-content: center;
+            .footer-cta {
+                max-width: 325px;
+                text-align: center;
+                padding: 3rem 0;
+                width: 100%;
+                .cta-title {
+                    font-size: 2rem;
+                    color: white;
+                }
+                .cta-description {
+                    font-size: 1rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec-home {
+        .home-cta {
+            .home-title {
+                font-size: 2rem;
+                padding-bottom: 0;
+                margin: 0.5rem 0;
+            }
+            .home-description {
+                font-size: 1rem;
+            }
+        }
+        .lead-magnet {
+            display: flex;
+            flex-direction: column;
+            input {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .sec-kpis {
+        .container {
+            flex-direction: column;
+            .kpi {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .sec-onboarding {
+        .intro {
+            p {
+                margin-bottom: 0;
+            }
+        }
+        .steps {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav {
+        .get-started {
+            .btn-sec-s {
+                font-size: 0.8rem;
+            }
+            .btn-main-s {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .sec-features {
+        .intro {
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .sec-benefits {
+        .intro {
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .sec-kpis {
+        .container {
+            flex-direction: column;
+            .kpi {
+                padding: 0.3rem;
+                .number {
+                    font-size: 2rem;
+                }
+                .desc {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .sec-onboarding {
+        .intro {
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

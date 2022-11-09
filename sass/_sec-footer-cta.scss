@@ -1,0 +1,28 @@
+@use 'components';
+@use 'globals';
+
+.sec-footer-cta {
+    background-image: url(../assets/img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: components.$color-footer;
+    display: flex;
+    justify-content: center;
+    .footer-container {
+        width: 100%;
+        max-width: 1100px;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        .footer-cta {
+            width: 40%;
+            .cta-title {
+                font-size: 2rem;
+            }
+            .cta-description {
+                font-size: 0.9rem;
+                color: #888;
+            }
+        }
+    }
+}
